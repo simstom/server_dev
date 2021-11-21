@@ -49,8 +49,9 @@
                 <div>{{ answer.modify_date }}</div>
             </div>
             {% endif %}
-                <div class="badge badge-light p-2">
-                    {{ answer.create_date }}
+                <div class="badge badge-light p-2 text-left">
+                    <div class="mb-2">{{ answer.author.username }}</div>
+                    <div>{{ answer.create_date }}</div>
                 </div>
             </div>
             {% if request.user == answer.author %}
